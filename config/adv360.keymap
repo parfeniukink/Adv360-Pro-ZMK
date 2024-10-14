@@ -34,12 +34,6 @@
     combos {
         compatible = "zmk,combos";
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <41 42>;
-            layers = <0>;
-        };
-
         underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <32 31>;
