@@ -34,23 +34,20 @@
     combos {
         compatible = "zmk,combos";
 
-        ctrl_a {
-            bindings = <&kp LC(A)>;
-            key-positions = <65 30>;
-            timeout-ms = <0>;
-            layers = <0>;
-        };
-
-        ctrl_w {
-            bindings = <&kp LC(W)>;
-            key-positions = <31 65>;
-            layers = <0>;
-        };
-
         escape {
             bindings = <&kp ESCAPE>;
             key-positions = <41 42>;
             layers = <0>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <32 31>;
+        };
+
+        dash {
+            bindings = <&kp MINUS>;
+            key-positions = <56 55>;
         };
     };
 
@@ -69,11 +66,11 @@
 
         functional {
             bindings = <
-&kp F1  &kp F2  &kp F3          &kp F4     &kp F5     &kp F6  &tog 0                                      &none          &kp F7  &kp F8                &kp F9                 &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans          &kp GRAVE  &trans     &trans  &none                                       &none          &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans   &trans   &trans
-&trans  &trans  &kp UNDERSCORE  &kp MINUS  &kp EQUAL  &trans  &none   &trans  &trans      &trans  &trans  &none          &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans   &trans   &trans
-&trans  &trans  &kp COLON       &kp W      &kp Q      &trans                  &trans      &trans                         &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans   &trans   &trans
-&trans  &trans  &trans          &trans     &trans             &trans  &trans  &trans      &trans  &trans  &kp BACKSLASH          &kp LESS_THAN         &kp GREATER_THAN       &trans   &trans   &trans
+&kp F1  &kp F2  &kp F3          &kp F4     &kp F5     &kp F6  &tog 0                                            &none          &kp F7  &kp F8                &kp F9                 &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans          &kp GRAVE  &trans     &trans  &none                                             &none          &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans   &trans   &trans
+&trans  &trans  &kp UNDERSCORE  &kp MINUS  &kp EQUAL  &trans  &none   &trans  &trans      &trans     &trans     &none          &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans   &trans   &trans
+&trans  &trans  &kp COLON       &kp W      &kp Q      &trans                  &trans      &trans                               &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans   &trans   &trans
+&trans  &trans  &trans          &trans     &trans             &trans  &trans  &trans      &kp LC(W)  &kp LC(A)  &kp BACKSLASH          &kp LEFT_COMMAND      &kp TAB                &trans   &trans   &trans
             >;
         };
 
