@@ -31,6 +31,29 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        ctrl_a {
+            bindings = <&kp LC(A)>;
+            key-positions = <65 30>;
+            timeout-ms = <0>;
+            layers = <0>;
+        };
+
+        ctrl_w {
+            bindings = <&kp LC(W)>;
+            key-positions = <31 65>;
+            layers = <0>;
+        };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <41 42>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
