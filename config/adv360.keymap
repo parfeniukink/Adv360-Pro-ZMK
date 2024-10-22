@@ -35,12 +35,12 @@
 
         underscore {
             bindings = <&kp UNDERSCORE>;
-            key-positions = <32 31>;
+            key-positions = <31 30>;
         };
 
         dash {
             bindings = <&kp MINUS>;
-            key-positions = <50 49>;
+            key-positions = <31 32>;
         };
     };
 
@@ -138,11 +138,11 @@
 
         development {
             bindings = <
-&kp F1  &kp F2     &kp F3     &kp F4                   &kp F5       &kp F6     &tog 0                                                   &none             &kp F7     &kp F8                 &kp F9                 &kp F10              &kp F11    &kp F12
-&trans  &trans     &kp LC(W)  &kp LC(P)                &trans       &trans     &none                                                    &none             &trans     &kp LEFT_BRACE         &kp RIGHT_BRACE        &trans               &trans     &trans
-&trans  &kp LC(A)  &kp GRAVE  &vim_remove_word         &kp LC(F)    &vim_save  &kp CARET  &trans  &trans      &trans     &trans         &kp DOLLAR        &vim_exit  &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
-&trans  &trans     &kp EQUAL  &vim_remove_word_insert  &kp LS(V)    &trans                        &trans      &trans                                      &trans     &kp LEFT_BRACKET       &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
-&trans  &trans     &trans     &vim_fold                &vim_unfold             &trans     &trans  &trans      &kp LA(S)  &kp LS(ENTER)  &kp LEFT_COMMAND             &vim_harpoon_previous  &vim_harpoon_next      &vim_harpoon_add     &trans     &trans
+&kp F1  &kp F2       &kp F3     &kp F4            &kp F5       &kp F6     &tog 0                                                   &none             &kp F7     &kp F8                 &kp F9                 &kp F10              &kp F11    &kp F12
+&trans  &trans       &kp LC(W)  &kp LC(P)         &trans       &trans     &none                                                    &none             &trans     &kp LEFT_BRACE         &kp RIGHT_BRACE        &trans               &trans     &trans
+&trans  &kp LC(A)    &kp GRAVE  &vim_remove_word  &kp LC(F)    &vim_save  &kp CARET  &trans  &trans      &trans     &trans         &kp DOLLAR        &vim_exit  &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
+&trans  &trans       &kp EQUAL  &kp BACKSLASH     &kp LS(V)    &trans                        &trans      &trans                                      &trans     &kp LEFT_BRACKET       &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
+&trans  &vim_unfold  &trans     &vim_fold         &vim_unfold             &trans     &trans  &trans      &kp LA(S)  &kp LS(ENTER)  &kp LEFT_COMMAND             &vim_harpoon_previous  &vim_harpoon_next      &vim_harpoon_add     &trans     &trans
             >;
         };
 
