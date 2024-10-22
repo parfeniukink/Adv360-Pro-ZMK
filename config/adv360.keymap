@@ -10,10 +10,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
@@ -46,53 +44,11 @@
     };
 
     macros {
-        remove_word_in_vim: remove_word_in_vim {
+        vim_remove_word: remove_word_in_vim {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp D &kp W>;
             label = "REMOVE_WORD_IN_VIM";
-        };
-
-        tmux_pane_left: tmux_pane_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(A) &kp H>;
-            label = "TMUX_PANE_LEFT";
-        };
-
-        tmux_pane_right: tmux_pane_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(A) &kp L>;
-            label = "TMUX_PANE_RIGHT";
-        };
-
-        vim_pane_right: vim_pane_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(W) &kp L>;
-            label = "VIM_PANE_RIGHT";
-        };
-
-        vim_pane_left: vim_pane_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(W) &kp H>;
-            label = "VIM_PANE_LEFT";
-        };
-
-        vim_pane_bottom: vim_pane_bottom {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(W) &kp J>;
-            label = "VIM_PANE_BOTTOM";
-        };
-
-        vim_pane_top: vim_pane_top {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RC(W) &kp K>;
-            label = "VIM_PANE_TOP";
         };
 
         vim_save: vim_save_no_exit {
@@ -109,15 +65,6 @@
             label = "VIM_EXIT_WITH_SAVE";
         };
 
-        python_breakpoint_message: python_breakpoint {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp B &kp R &kp E &kp A &kp K &kp P &kp O &kp I &kp N &kp T &kp LPAR &kp RPAR &kp SPACE &kp SPACE &kp POUND &kp SPACE &kp LS(T) &kp LS(O) &kp LS(D) &kp LS(O) &kp COLON &kp SPACE &kp R &kp E &kp M &kp O &kp V &kp E>;
-            label = "PYTHON_BREAKPOINT";
-            wait-ms = <1>;
-            tap-ms = <2>;
-        };
-
         vim_fold: vim_fold {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -130,6 +77,20 @@
             #binding-cells = <0>;
             bindings = <&kp Z &kp LS(A)>;
             label = "VIM_UNFOLD";
+        };
+
+        vim_remove_word_insert: vim_remove_word_insert {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp W>;
+            label = "VIM_REMOVE_WORD_INSERT";
+        };
+
+        vim_replace_string: vim_replace_string {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp S &kp FSLH>;
+            label = "VIM_REPLACE_STRING";
         };
     };
 
@@ -148,31 +109,31 @@
 
         functional {
             bindings = <
-&kp F1  &kp F2     &kp F3     &kp F4               &kp F5       &kp F6     &tog 0                                                    &none             &kp F7     &kp F8                &kp F9                 &kp F10  &kp F11    &kp F12
-&trans  &trans     &kp LC(W)  &kp LC(P)            &trans       &trans     &none                                                     &none             &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans   &trans     &trans
-&trans  &kp LC(A)  &kp GRAVE  &remove_word_in_vim  &kp LC(F)    &vim_save  &none   &trans  &trans      &trans         &trans         &none             &vim_exit  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB  &kp COLON  &kp ESCAPE
-&trans  &trans     &trans     &vim_fold            &vim_unfold  &kp LA(S)                  &trans      &trans                                          &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans   &trans     &trans
-&trans  &trans     &trans     &trans               &trans                  &trans  &trans  &trans      &kp BACKSLASH  &kp LS(ENTER)  &kp LEFT_COMMAND             &trans                &trans                 &trans   &trans     &trans
+&kp F1  &kp F2         &kp F3     &kp F4                   &kp F5       &kp F6     &tog 0                                                &none             &kp F7     &kp F8                &kp F9                 &kp F10              &kp F11    &kp F12
+&trans  &trans         &kp LC(W)  &kp LC(P)                &trans       &trans     &none                                                 &none             &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans               &trans     &trans
+&trans  &kp LC(A)      &kp GRAVE  &vim_remove_word         &kp LC(F)    &vim_save  &kp CARET  &trans  &trans      &trans  &trans         &kp DOLLAR        &vim_exit  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
+&trans  &kp BACKSLASH  &kp EQUAL  &vim_remove_word_insert  &kp LS(V)    &kp LA(S)                     &trans      &trans                                   &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
+&trans  &trans         &trans     &vim_fold                &vim_unfold             &trans     &trans  &trans      &trans  &kp LS(ENTER)  &kp LEFT_COMMAND             &hm LC(A) H           &hm LC(A) L            &trans               &trans     &trans
             >;
         };
 
         layer_mod {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none         &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
-&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                          &trans       &none  &none   &none   &none  &none  &none
+&none  &none         &none         &none         &none         &none         &bootloader                                    &bootloader  &none  &none   &none   &none  &none  &none
+&none  &none         &none         &none         &none         &none         &none        &none  &none      &trans  &none   &trans       &none  &none   &none   &none  &none  &none
+&none  &none         &none         &none         &none         &none                             &none      &none                        &none  &none   &none   &none  &none  &none
+&none  &none         &none         &none         &none                       &none        &none  &none      &none   &trans  &trans              &trans  &trans  &none  &none  &none
             >;
         };
 
         another_functional_layer {
             bindings = <
-&trans  &trans  &trans        &trans        &trans        &trans        &trans                                      &trans         &trans                &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans                                      &trans         &kp LS(LG(NUMBER_4))  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans        &trans  &trans  &trans      &trans  &trans  &trans         &kp LG(LS(S))         &kp LS(I)  &kp LS(A)  &trans  &trans  &trans
-&trans  &trans  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0                  &trans      &trans                         &trans                &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans        &trans        &trans                      &trans  &trans  &trans      &trans  &trans  &kp LG(SPACE)                        &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans         &trans                &trans          &trans  &trans                                      &trans  &trans        &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &trans         &trans                &trans          &trans  &trans                                      &trans  &kp N7        &kp N8        &kp N9        &trans  &trans  &trans
+&trans  &trans  &kp LS(LG(S))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans  &trans
+&trans  &trans  &trans         &trans                &trans          &trans                  &trans      &trans                  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans
+&trans  &trans  &trans         &trans                &trans                  &trans  &trans  &trans      &trans  &trans  &kp N0                &trans        &trans        &trans  &trans  &trans
             >;
         };
     };
