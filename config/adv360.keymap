@@ -93,6 +93,34 @@
             bindings = <&kp COLON &kp S &kp FSLH>;
             label = "VIM_REPLACE_STRING";
         };
+
+        vim_harpoon_add: vim_harpoon_add {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH &kp A>;
+            label = "VIM_HARPOON_ADD";
+        };
+
+        vim_harpoon_previous: vim_harpoon_previous {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH &kp Q>;
+            label = "VIM_HARPOON_PREVIOUS";
+        };
+
+        vim_harpoon_next: vim_harpoon_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH &kp E>;
+            label = "VIM_HARPOON_NEXT";
+        };
+
+        vim_harpoon_preview: vim_harpoon_preview {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSLASH &kp W>;
+            label = "VIM_HARPOON_PREVIEW";
+        };
     };
 
     keymap {
@@ -100,21 +128,21 @@
 
         default_layer {
             bindings = <
-&kp ESCAPE  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 0                                                                            &mo 2          &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp EQUAL   &kp Q      &kp W     &kp E     &kp R      &kp T   &kp PAGE_UP                                                                       &kp PAGE_DOWN  &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
-&kp TAB     &kp A      &kp S     &kp D     &kp F      &kp G   &kp HOME       &mo 3  &kp DELETE            &mo 2              &kp RIGHT_COMMAND  &kp END        &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z      &kp X     &kp C     &kp V      &kp B                         &kp LCTRL             &kp RALT                                             &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&kp CAPS    &kp GRAVE  &kp LALT  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &mo 1  &kp LEFT_COMMAND      &kp RIGHT_CONTROL  &kp ENTER          &kp SPACE              &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &mo 3
+&kp ESCAPE  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 0                                                                        &mo 2          &kp N6  &kp N7    &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp EQUAL   &kp Q      &kp W     &kp E     &kp R      &kp T   &kp PAGE_UP                                                                   &kp PAGE_DOWN  &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
+&kp TAB     &kp A      &kp S     &kp D     &kp F      &kp G   &kp HOME       &mo 3  &kp DELETE            &mo 2              &kp BACKSLASH  &kp END        &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z      &kp X     &kp C     &kp V      &kp B                         &kp LCTRL             &kp RALT                                         &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&kp CAPS    &kp GRAVE  &kp LALT  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &mo 1  &kp LEFT_COMMAND      &kp RIGHT_CONTROL  &kp ENTER      &kp SPACE              &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &mo 3
             >;
         };
 
-        functional {
+        development {
             bindings = <
-&kp F1  &kp F2         &kp F3     &kp F4                   &kp F5       &kp F6     &tog 0                                                &none             &kp F7     &kp F8                &kp F9                 &kp F10              &kp F11    &kp F12
-&trans  &trans         &kp LC(W)  &kp LC(P)                &trans       &trans     &none                                                 &none             &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans               &trans     &trans
-&trans  &kp LC(A)      &kp GRAVE  &vim_remove_word         &kp LC(F)    &vim_save  &kp CARET  &trans  &trans      &trans  &trans         &kp DOLLAR        &vim_exit  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
-&trans  &kp BACKSLASH  &kp EQUAL  &vim_remove_word_insert  &kp LS(V)    &kp LA(S)                     &trans      &trans                                   &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
-&trans  &trans         &trans     &vim_fold                &vim_unfold             &trans     &trans  &trans      &trans  &kp LS(ENTER)  &kp LEFT_COMMAND             &trans                &trans                 &trans               &trans     &trans
+&kp F1  &kp F2     &kp F3     &kp F4                   &kp F5       &kp F6     &tog 0                                                   &none             &kp F7     &kp F8                 &kp F9                 &kp F10              &kp F11    &kp F12
+&trans  &trans     &kp LC(W)  &kp LC(P)                &trans       &trans     &none                                                    &none             &trans     &kp LEFT_BRACE         &kp RIGHT_BRACE        &trans               &trans     &trans
+&trans  &kp LC(A)  &kp GRAVE  &vim_remove_word         &kp LC(F)    &vim_save  &kp CARET  &trans  &trans      &trans     &trans         &kp DOLLAR        &vim_exit  &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
+&trans  &trans     &kp EQUAL  &vim_remove_word_insert  &kp LS(V)    &trans                        &trans      &trans                                      &trans     &kp LEFT_BRACKET       &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
+&trans  &trans     &trans     &vim_fold                &vim_unfold             &trans     &trans  &trans      &kp LA(S)  &kp LS(ENTER)  &kp LEFT_COMMAND             &vim_harpoon_previous  &vim_harpoon_next      &vim_harpoon_add     &trans     &trans
             >;
         };
 
