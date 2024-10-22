@@ -114,7 +114,7 @@
 &trans  &trans         &kp LC(W)  &kp LC(P)                &trans       &trans     &none                                                 &none             &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans               &trans     &trans
 &trans  &kp LC(A)      &kp GRAVE  &vim_remove_word         &kp LC(F)    &vim_save  &kp CARET  &trans  &trans      &trans  &trans         &kp DOLLAR        &vim_exit  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
 &trans  &kp BACKSLASH  &kp EQUAL  &vim_remove_word_insert  &kp LS(V)    &kp LA(S)                     &trans      &trans                                   &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
-&trans  &trans         &trans     &vim_fold                &vim_unfold             &trans     &trans  &trans      &trans  &kp LS(ENTER)  &kp LEFT_COMMAND             &hm LC(A) H           &hm LC(A) L            &trans               &trans     &trans
+&trans  &trans         &trans     &vim_fold                &vim_unfold             &trans     &trans  &trans      &trans  &kp LS(ENTER)  &kp LEFT_COMMAND             &trans                &trans                 &trans               &trans     &trans
             >;
         };
 
