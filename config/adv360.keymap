@@ -40,7 +40,7 @@
 
         dash {
             bindings = <&kp MINUS>;
-            key-positions = <50 51>;
+            key-positions = <50 49>;
         };
     };
 
