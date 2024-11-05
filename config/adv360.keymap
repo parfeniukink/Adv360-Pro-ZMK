@@ -129,11 +129,11 @@
 
         development {
             bindings = <
-&kp F1  &kp F2     &kp F3     &kp F4            &kp F5       &kp F6     &tog 0                                                   &none             &kp F7     &kp F8                &kp F9                 &kp F10              &kp F11    &kp F12
-&trans  &trans     &kp LC(W)  &kp LC(P)         &trans       &trans     &none                                                    &none             &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans               &trans     &trans
-&trans  &kp LC(A)  &kp GRAVE  &vim_remove_word  &kp LC(F)    &vim_save  &kp CARET  &trans  &trans      &trans     &trans         &kp DOLLAR        &vim_exit  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
-&trans  &trans     &kp TILDE  &kp EQUAL         &kp LS(V)    &trans                        &trans      &trans                                      &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
-&trans  &trans     &trans     &vim_fold         &vim_unfold             &trans     &trans  &trans      &kp LA(S)  &kp LS(ENTER)  &kp LEFT_COMMAND             &vim_previous_tab     &vim_next_tab          &trans               &trans     &trans
+&kp F1  &kp F2     &kp F3     &kp F4                   &kp F5       &kp F6     &tog 0                                                   &none             &kp F7     &kp F8                &kp F9                 &kp F10              &kp F11    &kp F12
+&trans  &trans     &kp LC(W)  &kp BACKSLASH            &kp LC(P)    &trans     &none                                                    &none             &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans               &trans     &trans
+&trans  &kp LC(A)  &kp GRAVE  &vim_remove_word         &kp LC(F)    &vim_save  &kp CARET  &trans  &trans      &trans     &trans         &kp DOLLAR        &vim_exit  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
+&trans  &trans     &kp TILDE  &vim_remove_word_insert  &kp LS(V)    &trans                        &trans      &trans                                      &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
+&trans  &trans     &trans     &vim_fold                &vim_unfold             &trans     &trans  &trans      &kp LA(S)  &kp LS(ENTER)  &kp LEFT_COMMAND             &vim_previous_tab     &vim_next_tab          &trans               &trans     &trans
             >;
         };
 
@@ -149,11 +149,11 @@
 
         another_functional_layer {
             bindings = <
-&trans  &trans  &trans         &trans                &trans                &trans                &trans                                      &trans  &trans  &trans        &trans           &trans            &trans  &trans
-&trans  &trans  &trans         &trans                &trans                &trans                &trans                                      &trans  &trans  &kp N7        &kp N8           &kp N9            &trans  &trans
-&trans  &trans  &kp LS(LG(S))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))        &kp LG(LS(NUMBER_1))  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp N5           &kp NUMBER_6      &trans  &trans
-&trans  &trans  &trans         &trans                &trans                &trans                                &trans      &trans                  &trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3      &trans  &trans
-&trans  &trans  &trans         &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC                        &trans  &trans  &trans      &trans  &trans  &kp N0          &kp C_VOL_DN  &kp C_VOLUME_UP  &kp K_PLAY_PAUSE  &trans  &trans
+&trans  &trans  &trans         &trans                &trans          &trans                &trans                                      &trans  &trans  &trans        &trans           &trans            &trans  &trans
+&trans  &trans  &trans         &trans                &trans          &trans                &trans                                      &trans  &trans  &kp N7        &kp N8           &kp N9            &trans  &trans
+&trans  &trans  &kp LS(LG(S))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &kp LG(LS(NUMBER_1))  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp N5           &kp NUMBER_6      &trans  &trans
+&trans  &trans  &trans         &trans                &trans          &trans                                &trans      &trans                  &trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3      &trans  &trans
+&trans  &trans  &trans         &kp C_BRI_DN          &kp C_BRI_UP                          &trans  &trans  &trans      &trans  &trans  &kp N0          &kp C_VOL_DN  &kp C_VOLUME_UP  &kp K_PLAY_PAUSE  &trans  &trans
             >;
         };
     };
