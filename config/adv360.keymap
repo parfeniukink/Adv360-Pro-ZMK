@@ -36,16 +36,19 @@
         underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <31 30>;
+            timeout-ms = <30>;
         };
 
         dash {
             bindings = <&kp MINUS>;
             key-positions = <31 32>;
+            timeout-ms = <30>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
             key-positions = <42 43>;
+            timeout-ms = <30>;
         };
     };
 
