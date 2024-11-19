@@ -129,37 +129,37 @@
 &kp EQUAL   &kp Q      &kp W     &kp E     &kp R      &kp T   &kp PAGE_UP                                                                   &kp PAGE_DOWN  &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BSLH
 &kp TAB     &kp A      &kp S     &kp D     &kp F      &kp G   &kp HOME       &mo 3  &kp DELETE            &kp RIGHT_GUI      &kp BACKSLASH  &kp END        &kp H   &kp J     &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT   &kp Z      &kp X     &kp C     &kp V      &kp B                         &kp LCTRL             &kp RALT                                         &kp N   &kp M     &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&kp CAPS    &kp GRAVE  &kp LALT  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &mo 1  &kp LEFT_COMMAND      &kp RIGHT_CONTROL  &kp ENTER      &kp SPACE              &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &mo 3
+&kp CAPS    &kp GRAVE  &kp LALT  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &mo 1  &kp LEFT_COMMAND      &kp RIGHT_CONTROL  &kp ENTER      &kp SPACE              &kp DOWN  &kp UP     &kp LBKT  &kp RBKT  &tog 3
             >;
         };
 
         development {
             bindings = <
-&kp F1  &kp F2     &kp F3         &kp F4                   &kp F5       &kp F6             &tog 0                                                   &none             &kp F7     &kp F8                &kp F9                 &kp F10              &kp F11    &kp F12
-&trans  &trans     &kp LC(W)      &kp BACKSLASH            &kp LC(P)    &trans             &none                                                    &none             &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans               &trans     &trans
-&trans  &kp LC(A)  &kp GRAVE      &vim_remove_word         &kp LC(F)    &vim_save          &kp CARET  &trans  &trans      &trans     &trans         &kp DOLLAR        &vim_exit  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
-&trans  &trans     &kp TILDE      &vim_remove_word_insert  &kp LS(V)    &kp LG(BACKSPACE)                     &trans      &trans                                      &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
-&trans  &trans     &kp LG(SPACE)  &vim_fold                &vim_unfold                     &trans     &trans  &trans      &kp LA(S)  &kp LS(ENTER)  &kp LEFT_COMMAND             &vim_previous_tab     &vim_next_tab          &trans               &trans     &trans
+&kp F1  &kp F2     &kp F3     &kp F4                   &kp F5       &kp F6             &tog 0                                                       &none             &kp F7     &kp F8                &kp F9                 &kp F10              &kp F11    &kp F12
+&trans  &trans     &kp LC(W)  &kp BACKSLASH            &kp LC(P)    &trans             &none                                                        &none             &trans     &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans               &trans     &trans
+&trans  &kp LC(A)  &kp GRAVE  &vim_remove_word         &kp LC(F)    &vim_save          &kp LG(SPACE)  &trans  &trans      &trans     &trans         &kp LA(S)         &vim_exit  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
+&trans  &trans     &kp TILDE  &vim_remove_word_insert  &kp LS(V)    &kp LG(BACKSPACE)                         &trans      &trans                                      &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
+&trans  &trans     &trans     &vim_fold                &vim_unfold                     &trans         &trans  &trans      &kp LA(S)  &kp LS(ENTER)  &kp LEFT_COMMAND             &vim_previous_tab     &vim_next_tab          &trans               &trans     &trans
             >;
         };
 
-        layer_mod {
+        system_settings {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                          &trans       &none  &none   &none   &none  &none  &none
-&none  &none         &none         &none         &none         &none         &bootloader                                    &bootloader  &none  &none   &none   &none  &none  &none
-&none  &none         &none         &bl BL_DEC    &bl BL_INC    &none         &none        &none  &none      &trans  &none   &trans       &none  &none   &none   &none  &none  &none
-&none  &none         &none         &none         &none         &none                             &none      &none                        &none  &none   &none   &none  &none  &none
-&none  &none         &none         &none         &none                       &none        &none  &none      &none   &trans  &trans              &trans  &trans  &none  &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4  &none                                          &trans       &none  &none   &none   &none  &none  &none
+&none  &none         &none         &none          &none          &none         &bootloader                                    &bootloader  &none  &none   &none   &none  &none  &none
+&none  &none         &none         &bl BL_DEC     &bl BL_INC     &none         &none        &none  &none      &trans  &none   &trans       &none  &none   &none   &none  &none  &none
+&none  &none         &none         &kp C_VOL_DN   &kp C_VOL_UP   &none                             &none      &none                        &none  &none   &none   &none  &none  &none
+&none  &none         &none         &kp C_BRI_DEC  &kp C_BRI_INC                &none        &none  &none      &none   &trans  &trans              &trans  &trans  &none  &none  &none
             >;
         };
 
-        another_functional_layer {
+        os_keys_numpad {
             bindings = <
-&trans  &trans  &trans         &trans                &trans          &trans                &trans                                      &trans  &trans  &trans        &trans           &trans            &trans  &trans
-&trans  &trans  &trans         &trans                &trans          &trans                &trans                                      &trans  &trans  &kp N7        &kp N8           &kp N9            &trans  &trans
-&trans  &trans  &kp LS(LG(S))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &kp LG(LS(NUMBER_1))  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp NUMBER_4  &kp N5           &kp NUMBER_6      &trans  &trans
-&trans  &trans  &trans         &trans                &trans          &trans                                &trans      &trans                  &trans  &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3      &trans  &trans
-&trans  &trans  &trans         &kp C_BRI_DN          &kp C_BRI_UP                          &trans  &trans  &trans      &trans  &trans  &kp N0          &kp C_VOL_DN  &kp C_VOLUME_UP  &kp K_PLAY_PAUSE  &trans  &trans
+&trans  &trans  &trans         &trans                &trans          &trans                &trans                                         &trans      &trans  &trans        &trans        &trans        &trans  &trans
+&trans  &trans  &trans         &trans                &trans          &trans                &trans                                         &trans      &trans  &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans  &trans  &kp LS(LG(S))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))  &kp LG(LS(NUMBER_1))  &trans  &trans  &trans      &trans  &trans     &trans      &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &trans  &trans         &trans                &trans          &trans                                &trans      &trans                         &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+&trans  &trans  &trans         &trans                &trans                                &trans  &trans  &trans      &trans  &kp MINUS  &kp PERIOD          &trans        &kp N0        &trans        &trans  &trans
             >;
         };
     };
