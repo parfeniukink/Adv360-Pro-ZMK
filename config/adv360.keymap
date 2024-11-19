@@ -53,6 +53,13 @@
             timeout-ms = <30>;
             layers = <0>;
         };
+
+        escape {
+            bindings = <&kp ESC>;
+            key-positions = <41 42>;
+            layers = <0>;
+            timeout-ms = <30>;
+        };
     };
 
     macros {
