@@ -172,11 +172,11 @@
 
         media_shortcuts {
             bindings = <
-&trans  &trans                &trans     &trans                &trans          &trans                &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                &trans     &trans                &trans          &trans                &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(LG(NUMBER_4))  &kp LG(S)  &kp LG(LS(NUMBER_3))  &kp LS(LG(N5))  &kp LS(LG(NUMBER_1))  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                &trans     &trans                &kp LC(LA(A))   &trans                                &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                &trans     &trans                &trans                                &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans         &trans                &trans          &trans                &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans         &trans                &trans          &trans                &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LS(LG(NUMBER_4))  &kp LG(LS(S))  &kp LG(LS(NUMBER_3))  &kp LS(LG(N5))  &kp LS(LG(NUMBER_1))  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans         &trans                &kp LC(LA(A))   &trans                                &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                &trans         &trans                &trans                                &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
