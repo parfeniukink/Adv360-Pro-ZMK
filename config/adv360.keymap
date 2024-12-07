@@ -131,6 +131,15 @@
             #binding-cells = <0>;
             bindings = <&kp LG(LC(T)) &kp LG(V) &kp ENTER>;
             label = "TRANSLATE_WITH_MATE";
+            wait-ms = <20>;
+        };
+
+        ctrl_a_delayed: ctrl_a_delayed {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A)>;
+            label = "CTRL_A_DELAYED";
+            tap-ms = <200>;
         };
     };
 
