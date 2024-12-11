@@ -133,14 +133,6 @@
             label = "TRANSLATE_WITH_MATE";
             wait-ms = <20>;
         };
-
-        go_right_window: ctrl_a_delayed {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp L>;
-            label = "CTRL_A_DELAYED";
-            tap-ms = <200>;
-        };
     };
 
     keymap {
