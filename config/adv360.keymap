@@ -167,7 +167,7 @@
 &kp F1  &kp F2     &kp F3             &kp F4            &kp F5       &kp F6     &tog 0                                                &none             &kp F7           &kp F8                &kp F9                 &kp F10              &kp F11    &kp F12
 &trans  &kp LG(C)  &kp LC(W)          &kp BACKSLASH     &kp LC(P)    &kp LG(V)  &none                                                 &none             &tmux_move_left  &kp LEFT_BRACE        &kp RIGHT_BRACE        &tmux_move_right     &trans     &trans
 &trans  &kp LC(A)  &kp GRAVE          &vim_remove_word  &kp LC(F)    &vim_save  &kp LA(S)  &trans  &trans      &trans  &trans         &trans            &vim_exit        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
-&trans  &trans     &kp TILDE          &kp LG(SPACE)     &kp LS(V)    &trans                        &trans      &trans                                   &trans           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
+&trans  &trans     &kp TILDE          &kp LG(SPACE)     &kp LS(V)    &kp LC(C)                     &trans      &trans                                   &trans           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
 &trans  &trans     &kp LG(BACKSPACE)  &vim_fold         &vim_unfold             &trans     &trans  &trans      &trans  &kp LS(ENTER)  &kp LEFT_COMMAND                   &vim_previous_tab     &vim_next_tab          &kp LALT             &trans     &trans
             >;
         };
