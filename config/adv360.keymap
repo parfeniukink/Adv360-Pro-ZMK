@@ -167,18 +167,18 @@
 &kp F1  &kp F2     &kp F3             &kp F4            &kp F5       &kp F6     &tog 0                                                &none             &kp F7           &kp F8                &kp F9                 &kp F10              &kp F11    &kp F12
 &trans  &kp LG(C)  &kp LC(W)          &kp BACKSLASH     &kp LC(P)    &kp LG(V)  &none                                                 &none             &tmux_move_left  &kp LEFT_BRACE        &kp RIGHT_BRACE        &tmux_move_right     &trans     &trans
 &trans  &kp LC(A)  &kp GRAVE          &vim_remove_word  &kp LC(F)    &vim_save  &kp LA(S)  &trans  &trans      &trans  &trans         &trans            &vim_exit        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
-&trans  &trans     &kp TILDE          &kp LG(SPACE)     &kp LS(V)    &kp LC(C)                     &trans      &trans                                   &trans           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
+&trans  &kp LG(Z)  &kp TILDE          &kp LG(SPACE)     &kp LS(V)    &kp LC(C)                     &trans      &trans                                   &trans           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
 &trans  &trans     &kp LG(BACKSPACE)  &vim_fold         &vim_unfold             &trans     &trans  &trans      &trans  &kp LS(ENTER)  &kp LEFT_COMMAND                   &vim_previous_tab     &vim_next_tab          &kp LALT             &trans     &trans
             >;
         };
 
         system_and_numpad {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4  &trans                                              &trans       &trans  &trans  &trans   &trans  &trans  &trans
-&trans  &trans        &trans        &trans         &trans         &trans        &bootloader                                         &bootloader  &trans  &kp N7  &kp N8   &kp N9  &trans  &trans
-&trans  &trans        &trans        &bl BL_DEC     &bl BL_INC     &trans        &trans       &trans  &trans      &trans  &trans     &trans       &trans  &kp N4  &kp N5   &kp N6  &trans  &trans
-&trans  &trans        &trans        &kp C_VOL_DN   &kp C_VOL_UP   &trans                             &trans      &trans                          &trans  &kp N1  &kp N2   &kp N3  &trans  &trans
-&trans  &trans        &trans        &kp C_BRI_DEC  &kp C_BRI_INC                &trans       &trans  &trans      &trans  &kp MINUS  &kp N0               &trans  &kp DOT  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4  &trans                                              &trans       &trans  &trans  &trans     &trans  &trans   &trans
+&trans  &trans        &trans        &trans         &trans         &trans        &bootloader                                         &bootloader  &trans  &kp N7  &kp N8     &kp N9  &trans   &trans
+&trans  &trans        &trans        &bl BL_DEC     &bl BL_INC     &trans        &trans       &trans  &trans      &trans  &trans     &trans       &trans  &kp N4  &kp N5     &kp N6  &kp DOT  &trans
+&trans  &trans        &trans        &kp C_VOL_DN   &kp C_VOL_UP   &trans                             &trans      &trans                          &trans  &kp N1  &kp N2     &kp N3  &trans   &trans
+&trans  &trans        &trans        &kp C_BRI_DEC  &kp C_BRI_INC                &trans       &trans  &trans      &trans  &kp MINUS  &kp N0               &trans  &kp COMMA  &trans  &trans   &trans
             >;
         };
 
