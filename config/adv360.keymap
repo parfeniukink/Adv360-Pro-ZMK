@@ -164,11 +164,11 @@
 
         left_hand_thumb {
             bindings = <
-&kp F1     &kp F2     &kp F3             &kp F4            &kp F5       &kp F6     &tog 0                                                &none             &kp F7           &kp F8                &kp F9                 &kp F10              &kp F11    &kp F12
-&trans     &kp LG(C)  &kp LC(W)          &kp BACKSLASH     &kp LC(P)    &kp LG(V)  &none                                                 &none             &tmux_move_left  &kp LEFT_BRACE        &kp RIGHT_BRACE        &tmux_move_right     &trans     &trans
-&kp LG(A)  &kp LC(A)  &kp GRAVE          &vim_remove_word  &kp LC(F)    &vim_save  &kp LA(S)  &trans  &trans      &trans  &trans         &trans            &vim_exit        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
-&trans     &kp LG(Z)  &kp TILDE          &kp LG(SPACE)     &kp LS(V)    &kp LC(C)                     &trans      &trans                                   &trans           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
-&trans     &trans     &kp LG(BACKSPACE)  &vim_fold         &vim_unfold             &trans     &trans  &trans      &trans  &kp LS(ENTER)  &kp LEFT_COMMAND                   &vim_previous_tab     &vim_next_tab          &kp LALT             &trans     &trans
+&kp F1     &kp F2     &kp F3             &kp F4            &kp F5       &kp F6     &tog 0                                                &none             &kp F7             &kp F8                &kp F9                 &kp F10              &kp F11    &kp F12
+&trans     &kp LG(C)  &kp LC(W)          &kp BACKSLASH     &kp LC(P)    &kp LG(V)  &none                                                 &none             &vim_previous_tab  &kp LEFT_BRACE        &kp RIGHT_BRACE        &vim_next_tab        &trans     &trans
+&kp LG(A)  &kp LC(A)  &kp GRAVE          &vim_remove_word  &kp LC(F)    &vim_save  &kp LA(S)  &trans  &trans      &trans  &trans         &kp LG(LC(T))     &vim_exit          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp TAB              &kp COLON  &kp ESCAPE
+&trans     &kp LG(Z)  &kp TILDE          &kp LG(SPACE)     &kp LS(V)    &kp LC(C)                     &trans      &trans                                   &trans             &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &vim_replace_string  &trans     &trans
+&trans     &trans     &kp LG(BACKSPACE)  &vim_fold         &vim_unfold             &trans     &trans  &trans      &trans  &kp LS(ENTER)  &kp LEFT_COMMAND                     &tmux_move_left       &tmux_move_right       &kp LALT             &trans     &trans
             >;
         };
 
@@ -195,7 +195,7 @@
         browser_shortcuts {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans           &trans         &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &kp LG(LC(T))    &kp LC(LG(T))  &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans           &kp LC(LG(T))  &trans         &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LC(LS(TAB))  &kp LC(TAB)    &kp LG(LA(I))  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans           &trans         &trans         &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans           &trans         &trans         &trans  &trans
