@@ -115,14 +115,14 @@
         vim_next_tab: vim_next_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp G &kp T>;
+            bindings = <&kp BACKSLASH &kp T>;
             label = "VIM_NEXT_TAB";
         };
 
         vim_previous_tab: vim_previous_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp G &kp LS(T)>;
+            bindings = <&kp BACKSLASH &kp LS(T)>;
             label = "VIM_PREVIOUS_TAB";
         };
 
