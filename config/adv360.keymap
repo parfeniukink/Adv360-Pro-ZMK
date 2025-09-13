@@ -188,7 +188,7 @@
 &trans  &trans         &trans                &trans                &trans          &trans  &trans                                      &trans  &trans  &trans    &kp UP    &trans     &trans  &trans
 &trans  &kp LS(LG(S))  &kp LG(LS(NUMBER_2))  &kp LG(LS(NUMBER_3))  &kp LS(LG(N5))  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
 &trans  &trans         &trans                &trans                &trans          &trans                  &trans      &trans                  &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans         &kp LEFT_SHIFT        &kp LALT              &kp LEFT_GUI            &trans  &trans  &trans      &trans  &trans  &trans          &trans    &trans    &trans     &trans  &trans
+&trans  &trans         &kp LEFT_ALT          &kp LEFT_SHIFT        &kp LEFT_GUI            &trans  &trans  &trans      &trans  &trans  &trans          &trans    &trans    &trans     &trans  &trans
             >;
         };
 
