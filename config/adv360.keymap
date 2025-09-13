@@ -184,11 +184,11 @@
 
         shortcuts_and_arrows {
             bindings = <
-&trans  &trans                &trans         &trans                &trans          &trans                &trans                                      &trans  &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans                &trans         &trans                &trans          &trans                &trans                                      &trans  &trans  &trans    &kp UP    &trans     &trans  &trans
-&trans  &kp LS(LG(NUMBER_4))  &kp LG(LS(S))  &kp LG(LS(NUMBER_3))  &kp LS(LG(N5))  &kp LS(LG(NUMBER_1))  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans                &trans         &trans                &kp LC(LA(P))   &trans                                &trans      &trans                  &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans                &trans         &kp LEFT_SHIFT        &kp LEFT_GUI                          &trans  &trans  &trans      &trans  &trans  &trans          &trans    &trans    &trans     &trans  &trans
+&trans  &trans         &trans                &trans                &trans          &trans  &trans                                      &trans  &trans  &trans    &trans    &trans     &trans  &trans
+&trans  &trans         &trans                &trans                &trans          &trans  &trans                                      &trans  &trans  &trans    &kp UP    &trans     &trans  &trans
+&trans  &kp LS(LG(S))  &kp LG(LS(NUMBER_2))  &kp LG(LS(NUMBER_3))  &kp LS(LG(N5))  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans         &trans                &trans                &trans          &trans                  &trans      &trans                  &trans  &trans    &trans    &trans     &trans  &trans
+&trans  &trans         &kp LEFT_SHIFT        &kp LALT              &kp LEFT_GUI            &trans  &trans  &trans      &trans  &trans  &trans          &trans    &trans    &trans     &trans  &trans
             >;
         };
 
@@ -206,7 +206,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        numpad {
+        system_and_numpad {
             if-layers = <1 3>;
             then-layer = <2>;
         };
